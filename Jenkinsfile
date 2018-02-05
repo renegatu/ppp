@@ -18,7 +18,7 @@ pipeline {
         }
         stage('error') {
           steps {
-            build(job: 'ppp', quietPeriod: 1)
+            build 'ppp'
           }
         }
       }
