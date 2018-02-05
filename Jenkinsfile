@@ -16,9 +16,11 @@ pipeline {
             echo 'ppp - stage unu'
           }
         }
-        stage('error') {
+        stage('and more') {
           steps {
-            isUnix()
+            sh 'uname -a'
+            sleep 5
+            pwd()
           }
         }
       }
