@@ -20,7 +20,7 @@ pipeline {
           steps {
             sh 'uname -a'
             sleep 5
-            pwd()
+            echo '$vara1'
           }
         }
       }
