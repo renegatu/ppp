@@ -7,13 +7,26 @@ pipeline {
   }
   stages {
     stage('stage1') {
-      steps {
-        echo 'ppp - stage unu'
+      environment {
+        vara1 = '000'
+      }
+      parallel {
+        stage('stage1') {
+          steps {
+            echo 'ppp - stage unu'
+          }
+        }
+        stage('') {
+          steps {
+            build(job: 'jobtest', quietPeriod: 1)
+          }
+        }
       }
     }
     stage('stage2') {
       steps {
         sh 'uptime'
+        sh 'echo "variable value vara1 is ..$vara1.."'
       }
     }
   }
