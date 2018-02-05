@@ -16,9 +16,9 @@ pipeline {
             echo 'ppp - stage unu'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
-            build(job: 'jobtest', quietPeriod: 1)
+            build(job: 'ppp', quietPeriod: 1)
           }
         }
       }
