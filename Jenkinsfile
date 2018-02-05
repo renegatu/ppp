@@ -18,7 +18,7 @@ pipeline {
         }
         stage('error') {
           steps {
-            build 'ppp'
+            isUnix()
           }
         }
       }
